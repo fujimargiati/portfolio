@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuji Margiati — AI & NLP Systems Designer</title>
+<meta name="description" content="Prompt Engineer & AI Automation specialist. I turn language and raw data into systems that make decisions — from crisis-detection engines to LLM-powered sentiment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3F4F1;
+    --card:#FBFBF8;
+    --ink:#14202B;
+    --muted:#5A636D;
+    --line:#E3E2DB;
+    --teal:#0F7B6C;
+    --amber:#DE9327;
+    --red:#C24A38;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .mono{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .serif{font-family:"Fraunces",serif}
+
+  /* ---------- Hero ---------- */
+  header.hero{padding:76px 0 40px}
+  .eyebrow{margin:0 0 26px}
+  h1{
+    font-family:"Fraunces",serif;font-weight:500;
+    font-size:clamp(44px,8vw,88px);line-height:.98;letter-spacing:-.02em;margin:0;
+  }
+  .role{
+    font-family:"IBM Plex Mono",monospace;font-size:clamp(13px,1.6vw,16px);
+    letter-spacing:.02em;color:var(--teal);margin:20px 0 0;font-weight:500;
+  }
+  .thesis{
+    font-family:"Fraunces",serif;font-weight:400;font-size:clamp(20px,2.9vw,29px);
+    line-height:1.35;max-width:26ch;margin:26px 0 0;color:var(--ink);
+  }
+  .thesis em{font-style:italic;color:var(--teal)}
+
+  /* ---------- Signature: crisis state ramp ---------- */
+  .ramp{margin:52px 0 8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+  .ramp-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+  .ramp-track{position:relative;height:8px;border-radius:99px;overflow:hidden;
+    background:linear-gradient(90deg,var(--teal) 0%,var(--teal) 30%,var(--amber) 55%,var(--amber) 72%,var(--red) 100%)}
+  .ramp-dot{position:absolute;top:50%;left:0;width:16px;height:16px;border-radius:50%;
+    background:var(--card);border:3px solid var(--ink);transform:translate(-50%,-50%);
+    animation:travel 7s ease-in-out infinite}
+  @keyframes travel{
+    0%,8%{left:4%}
+    38%{left:42%}
+    62%{left:66%}
+    88%,100%{left:97%}
+  }
+  .ramp-states{display:flex;justify-content:space-between;margin-top:14px}
+  .ramp-states span{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em}
+  .s-normal{color:var(--teal)} .s-watch{color:var(--amber)} .s-hot{color:var(--amber)} .s-crisis{color:var(--red)}
+
+  /* ---------- Sections ---------- */
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  .sec-head{margin:0 0 34px}
+  .sec-head h2{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(26px,4vw,38px);
+    letter-spacing:-.01em;margin:12px 0 0;line-height:1.1}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .about-grid p{margin:0 0 18px;color:#28313B}
+  .about-grid p:last-child{margin-bottom:0}
+  .lead{font-family:"Fraunces",serif;font-size:22px;line-height:1.45}
+
+  /* ---------- Flagship ---------- */
+  .flagship{background:var(--ink);color:#EDEDE7;border-radius:16px;padding:44px;margin-top:6px}
+  .flagship .mono{color:#8B99A3}
+  .flagship h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(30px,5vw,46px);
+    margin:14px 0 0;letter-spacing:-.01em;color:#fff}
+  .flagship p{max-width:60ch;color:#C7CDD2;margin:18px 0 26px;font-size:17px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;
+    border:1px solid #33414D;color:#AEB9C1;padding:6px 12px;border-radius:99px}
+  .flagship a{color:#5FD0BE}
+
+  /* ---------- Work cards ---------- */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 26px 24px;
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px -20px rgba(20,32,43,.4);border-color:#CFD3C9}
+  .card .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--teal)}
+  .card h3{font-family:"Fraunces",serif;font-weight:500;font-size:23px;margin:12px 0 8px;letter-spacing:-.01em}
+  .card p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.55}
+  .card .link{display:inline-block;margin-top:16px;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+  .card .link::after{content:" \2192"}
+  .card.wide{grid-column:1 / -1}
+
+  /* ---------- Skills ---------- */
+  .skill-row{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+  .skill-row:first-of-type{border-top:none}
+  .skill-row .k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink);padding-top:3px}
+  .skill-row .v{color:#333B44}
+
+  /* ---------- Contact ---------- */
+  .contact{display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;margin-top:8px}
+  .contact a{font-family:"IBM Plex Mono",monospace;font-size:14px;letter-spacing:.02em;
+    display:inline-flex;align-items:center;gap:8px}
+  .contact a .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);display:inline-block}
+  footer{padding:40px 0 60px;color:var(--muted)}
+  footer .mono{font-size:11px}
+
+  @media (max-width:760px){
+    .about-grid{grid-template-columns:1fr;gap:22px}
+    .cards{grid-template-columns:1fr}
+    .flagship{padding:30px}
+    .skill-row{grid-template-columns:1fr;gap:4px}
+    header.hero{padding:52px 0 30px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .ramp-dot{animation:none;left:97%}
+    html{scroll-behavior:auto}
+    .card{transition:none}
+  }
+  :focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:3px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="mono eyebrow">Linguist &nbsp;&rarr;&nbsp; AI Systems Designer</p>
+    <h1>Fuji<br>Margiati</h1>
+    <p class="role">Prompt Engineer &nbsp;·&nbsp; AI Automation &nbsp;·&nbsp; LLM &amp; NLP Systems Design</p>
+    <p class="thesis">I turn language and raw data into systems that <em>make decisions</em> — from crisis-detection engines to LLM-powered sentiment.</p>
+
+    <div class="ramp" aria-hidden="true">
+      <div class="ramp-label">
+        <span class="mono">Smart Alert · crisis lifecycle</span>
+        <span class="mono">real-time signal</span>
+      </div>
+      <div class="ramp-track"><span class="ramp-dot"></span></div>
+      <div class="ramp-states">
+        <span class="s-normal">Normal</span>
+        <span class="s-watch">Watch</span>
+        <span class="s-hot">Hot</span>
+        <span class="s-crisis">Crisis</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="sec-head"><p class="mono">Approach</p></div>
+    <div class="about-grid">
+      <div>
+        <p class="lead">Nine years at Dataxet Sonar — from Senior Data Analyst to Linguistics Manager. I started by reading sentiment and ended up building the systems that read it.</p>
+      </div>
+      <div>
+        <p>My background is Indonesian Literature, not engineering — and that's the point. I own concepts end-to-end: definitions, metrics, formulas, and workflows.</p>
+        <p>I ship through AI-assisted development and strong prompt engineering, turning messy business needs into reliable LLM workflows — even for complex systems.</p>
+        <p>Open to Prompt Engineer, AI Automation, AI / Insights Analyst, and Senior Data Analyst roles — remote, hybrid, or on-site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="flagship">
+    <div class="flagship">
+      <p class="mono">Flagship — built end-to-end</p>
+      <h3>Cogan</h3>
+      <p>An LLM-powered media-intelligence platform. I designed the MCP server that connects Claude directly to a PostgreSQL database (deployed on Railway), with skill-driven automated report generation for ~30 clients and a 17-detector anomaly engine that flags anomalies in the data.</p>
+      <div class="chips">
+        <span class="chip">MCP server</span>
+        <span class="chip">Claude → PostgreSQL</span>
+        <span class="chip">Railway</span>
+        <span class="chip">17-detector anomaly engine</span>
+        <span class="chip">Automated reporting</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sec-head"><p class="mono">Selected work</p><h2>Systems I've designed</h2></div>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag">Crisis intelligence</span>
+        <h3>Smart Alert</h3>
+        <p>A crisis early-warning system for social &amp; online media — a NORMAL→WATCH→HOT→CRISIS state machine driven by engagement-velocity (EVS) and story-based volume, with baselines and false-alarm controls.</p>
+        <a class="link" href="https://github.com/fujimargiati/smart-alert-concept">Read the concept</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">NLP</span>
+        <h3>Sentiment Engine Evolution</h3>
+        <p>Three generations of a production sentiment system: rule-based NLP (adjective + noun) → ABSA → LLM-based sentiment &amp; ABSA — now also powering mood and sentence-type classification.</p>
+        <a class="link" href="https://github.com/fujimargiati/sentiment-engine-evolution">Read the concept</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Data design</span>
+        <h3>Industry Taxonomy</h3>
+        <p>Classification taxonomy databases built from scratch to categorize conversation per industry — the backbone that makes cross-client analysis consistent and comparable.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Automation</span>
+        <h3>Insight Automation</h3>
+        <p>Automated insight reporting end-to-end, including GEO (Generative Engine Optimization) and EVO formats — shifting insight generation itself onto AI.</p>
+      </div>
+
+      <div class="card wide">
+        <span class="tag">Go-to-market</span>
+        <h3>Client Journey</h3>
+        <p>Designed the full client journey — client brief, sales deck, and onboarding automation — so the pipeline from first contact to live account is coherent and repeatable.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><p class="mono">Toolkit</p></div>
+    <div class="skill-row"><div class="k">AI &amp; LLM</div><div class="v">Prompt engineering, LLM automation &amp; workflow design, LLM-based classification (sentiment / ABSA / mood / sentence-type), AI-assisted development, MCP tooling</div></div>
+    <div class="skill-row"><div class="k">NLP</div><div class="v">Sentiment (rule-based → ABSA → LLM), NER, BIO tagging, industry taxonomy design; multilingual — Indonesian, Malay, English, Vietnamese</div></div>
+    <div class="skill-row"><div class="k">Systems</div><div class="v">Crisis / anomaly detection design (engagement-velocity &amp; volume-based, baselines, state machines), insight-report automation, GEO &amp; EVO reporting</div></div>
+    <div class="skill-row"><div class="k">Data</div><div class="v">Raw data → business decisions, SQL, PostgreSQL, Python (AI-assisted), BigQuery, EDA, Tableau, Google Data Studio</div></div>
+  </section>
+
+  <section id="contact">
+    <div class="sec-head"><p class="mono">Contact</p><h2>Let's build something</h2></div>
+    <div class="contact">
+      <a href="mailto:fujimargiati@gmail.com"><span class="dot"></span>fujimargiati@gmail.com</a>
+      <a href="https://www.linkedin.com/in/fujimargiati/"><span class="dot"></span>LinkedIn</a>
+      <a href="https://github.com/fujimargiati"><span class="dot"></span>GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p class="mono">Fuji Margiati · Jakarta, Indonesia · AI &amp; NLP Systems Design</p>
+  </footer>
+
+</div>
+</body>
+</html>
