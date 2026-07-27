@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fuji Margiati — AI & NLP Systems Designer</title>
-<meta name="description" content="Prompt Engineer & AI Automation specialist. I turn language and raw data into systems that make decisions — from crisis-detection engines to LLM-powered sentiment.">
+<title>Fuji Margiati — Prompt Engineer & AI/NLP Systems Designer</title>
+<meta name="description" content="Portfolio of Fuji Margiati, a Prompt Engineer and AI/NLP Systems Designer building LLM-powered classification, crisis-detection, anomaly-detection, and automated insight workflows.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,11 +14,13 @@
     --card:#FBFBF8;
     --ink:#14202B;
     --muted:#5A636D;
-    --line:#E3E2DB;
+    --line:#E2E4DF;
     --teal:#0F7B6C;
+    --teal-soft:#DDEDE8;
     --amber:#DE9327;
     --red:#C24A38;
-    --maxw:1080px;
+    --navy:#101A23;
+    --maxw:1120px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -28,225 +30,383 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:var(--teal);text-decoration:none}
-  a:hover{text-decoration:underline;text-underline-offset:3px}
+  a:hover{text-decoration:underline;text-underline-offset:4px}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  .mono{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .mono{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
   .serif{font-family:"Fraunces",serif}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-  /* ---------- Hero ---------- */
-  header.hero{padding:76px 0 40px}
-  .eyebrow{margin:0 0 26px}
-  h1{
-    font-family:"Fraunces",serif;font-weight:500;
-    font-size:clamp(44px,8vw,88px);line-height:.98;letter-spacing:-.02em;margin:0;
-  }
-  .role{
-    font-family:"IBM Plex Mono",monospace;font-size:clamp(13px,1.6vw,16px);
-    letter-spacing:.02em;color:var(--teal);margin:20px 0 0;font-weight:500;
-  }
-  .thesis{
-    font-family:"Fraunces",serif;font-weight:400;font-size:clamp(20px,2.9vw,29px);
-    line-height:1.35;max-width:26ch;margin:26px 0 0;color:var(--ink);
-  }
+  /* Navigation */
+  .nav-shell{position:sticky;top:0;z-index:20;background:rgba(243,244,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(226,228,223,.9)}
+  nav{display:flex;align-items:center;justify-content:space-between;min-height:66px;gap:24px}
+  .brand{font-family:"Fraunces",serif;font-size:20px;font-weight:600;color:var(--ink)}
+  .nav-links{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:flex-end}
+  .nav-links a{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+  .nav-links a:hover{color:var(--teal);text-decoration:none}
+  .nav-cta{padding:9px 14px;border:1px solid var(--teal);border-radius:999px;color:var(--teal)!important}
+
+  /* Hero */
+  header.hero{padding:86px 0 48px}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);gap:64px;align-items:end}
+  .eyebrow{margin:0 0 24px}
+  h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(52px,8vw,92px);line-height:.96;letter-spacing:-.025em;margin:0}
+  .role{font-family:"IBM Plex Mono",monospace;font-size:clamp(13px,1.6vw,16px);letter-spacing:.02em;color:var(--teal);margin:22px 0 0;font-weight:500}
+  .thesis{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(23px,3vw,31px);line-height:1.32;max-width:27ch;margin:28px 0 0;color:var(--ink)}
   .thesis em{font-style:italic;color:var(--teal)}
+  .hero-note{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .hero-note p{margin:0;color:#2B3540}
+  .hero-note p+p{margin-top:15px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:999px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;font-weight:500;border:1px solid var(--teal)}
+  .btn.primary{background:var(--teal);color:white}
+  .btn.secondary{color:var(--teal);background:transparent}
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
 
-  /* ---------- Signature: crisis state ramp ---------- */
-  .ramp{margin:52px 0 8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
-  .ramp-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
-  .ramp-track{position:relative;height:8px;border-radius:99px;overflow:hidden;
-    background:linear-gradient(90deg,var(--teal) 0%,var(--teal) 30%,var(--amber) 55%,var(--amber) 72%,var(--red) 100%)}
-  .ramp-dot{position:absolute;top:50%;left:0;width:16px;height:16px;border-radius:50%;
-    background:var(--card);border:3px solid var(--ink);transform:translate(-50%,-50%);
-    animation:travel 7s ease-in-out infinite}
-  @keyframes travel{
-    0%,8%{left:4%}
-    38%{left:42%}
-    62%{left:66%}
-    88%,100%{left:97%}
-  }
+  /* Crisis ramp */
+  .ramp{margin:54px 0 6px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+  .ramp-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;gap:20px}
+  .ramp-track{position:relative;height:8px;border-radius:99px;overflow:visible;background:linear-gradient(90deg,var(--teal) 0%,var(--teal) 30%,var(--amber) 55%,var(--amber) 72%,var(--red) 100%)}
+  .ramp-dot{position:absolute;top:50%;left:0;width:16px;height:16px;border-radius:50%;background:var(--card);border:3px solid var(--ink);transform:translate(-50%,-50%);animation:travel 7s ease-in-out infinite}
+  @keyframes travel{0%,8%{left:4%}38%{left:42%}62%{left:66%}88%,100%{left:97%}}
   .ramp-states{display:flex;justify-content:space-between;margin-top:14px}
-  .ramp-states span{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em}
-  .s-normal{color:var(--teal)} .s-watch{color:var(--amber)} .s-hot{color:var(--amber)} .s-crisis{color:var(--red)}
+  .ramp-states span{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em}
+  .s-normal{color:var(--teal)} .s-watch,.s-hot{color:var(--amber)} .s-crisis{color:var(--red)}
 
-  /* ---------- Sections ---------- */
-  section{padding:64px 0;border-top:1px solid var(--line)}
-  .sec-head{margin:0 0 34px}
-  .sec-head h2{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(26px,4vw,38px);
-    letter-spacing:-.01em;margin:12px 0 0;line-height:1.1}
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  .sec-head{margin:0 0 36px}
+  .sec-head h2{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(30px,4vw,43px);letter-spacing:-.01em;margin:12px 0 0;line-height:1.1}
+  .sec-head p:last-child{max-width:65ch;color:var(--muted);margin:15px 0 0}
 
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-  .about-grid p{margin:0 0 18px;color:#28313B}
-  .about-grid p:last-child{margin-bottom:0}
-  .lead{font-family:"Fraunces",serif;font-size:22px;line-height:1.45}
+  /* Impact */
+  .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .metric{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;min-height:150px}
+  .metric strong{display:block;font-family:"Fraunces",serif;font-size:38px;line-height:1;color:var(--ink);font-weight:500}
+  .metric span{display:block;margin-top:12px;color:var(--muted);font-size:14px;line-height:1.45}
 
-  /* ---------- Flagship ---------- */
-  .flagship{background:var(--ink);color:#EDEDE7;border-radius:16px;padding:44px;margin-top:6px}
-  .flagship .mono{color:#8B99A3}
-  .flagship h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(30px,5vw,46px);
-    margin:14px 0 0;letter-spacing:-.01em;color:#fff}
-  .flagship p{max-width:60ch;color:#C7CDD2;margin:18px 0 26px;font-size:17px}
+  /* About */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+  .about-grid p{margin:0 0 18px;color:#2D3640}
+  .lead{font-family:"Fraunces",serif;font-size:25px;line-height:1.42;color:var(--ink)!important}
+  .principles{display:grid;gap:12px;margin-top:26px}
+  .principle{display:grid;grid-template-columns:120px 1fr;gap:18px;padding-top:14px;border-top:1px solid var(--line)}
+  .principle b{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+  .principle span{font-size:15px;color:var(--muted)}
+
+  /* Flagship */
+  .flagship{background:var(--navy);color:#EDEDE7;border-radius:18px;padding:48px}
+  .flagship .mono{color:#8E9CA7}
+  .flagship-top{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+  .flagship h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(36px,5vw,54px);margin:14px 0 0;letter-spacing:-.01em;color:#fff}
+  .flagship .summary{color:#C8D0D5;margin:18px 0 24px;font-size:17px;max-width:62ch}
   .chips{display:flex;flex-wrap:wrap;gap:9px}
-  .chip{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;
-    border:1px solid #33414D;color:#AEB9C1;padding:6px 12px;border-radius:99px}
-  .flagship a{color:#5FD0BE}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;border:1px solid #33414D;color:#B6C2CA;padding:6px 11px;border-radius:99px}
+  .flagship a{color:#65D5C3}
+  .scope-box{border:1px solid #33414D;border-radius:14px;padding:24px;background:rgba(255,255,255,.025)}
+  .scope-box h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#94A3AD;margin:0 0 15px}
+  .scope-box ul{margin:0;padding-left:18px;color:#D4DBDF}
+  .scope-box li+li{margin-top:9px}
+  .flagship-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:34px}
+  .flow-step{border-top:1px solid #42515D;padding-top:12px}
+  .flow-step b{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:#F0F3F4}
+  .flow-step span{display:block;color:#91A0AA;font-size:13px;margin-top:6px;line-height:1.4}
 
-  /* ---------- Work cards ---------- */
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 26px 24px;
-    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-  .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px -20px rgba(20,32,43,.4);border-color:#CFD3C9}
-  .card .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;
-    text-transform:uppercase;color:var(--teal)}
-  .card h3{font-family:"Fraunces",serif;font-weight:500;font-size:23px;margin:12px 0 8px;letter-spacing:-.01em}
-  .card p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.55}
-  .card .link{display:inline-block;margin-top:16px;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
-  .card .link::after{content:" \2192"}
-  .card.wide{grid-column:1 / -1}
+  /* Case studies */
+  .cases{display:grid;gap:22px}
+  .case{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px}
+  .case-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+  .case h3{font-family:"Fraunces",serif;font-weight:500;font-size:29px;margin:8px 0 0;line-height:1.15}
+  .case .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--teal)}
+  .case-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+  .case-block h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.09em;margin:0 0 9px;color:var(--ink)}
+  .case-block p{font-size:14.5px;line-height:1.55;color:var(--muted);margin:0}
+  .case-link{font-family:"IBM Plex Mono",monospace;font-size:12px;white-space:nowrap}
+  .case-link::after{content:" →"}
 
-  /* ---------- Skills ---------- */
-  .skill-row{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+  /* Reliability */
+  .reliability{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .reliability article{padding:24px 0;border-top:2px solid var(--teal)}
+  .reliability h3{font-family:"Fraunces",serif;font-size:23px;font-weight:500;margin:0 0 10px}
+  .reliability p{font-size:15px;color:var(--muted);margin:0}
+
+  /* Skills */
+  .skill-row{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:20px 0;border-top:1px solid var(--line)}
   .skill-row:first-of-type{border-top:none}
-  .skill-row .k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;
-    text-transform:uppercase;color:var(--ink);padding-top:3px}
+  .skill-row .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);padding-top:4px}
   .skill-row .v{color:#333B44}
 
-  /* ---------- Contact ---------- */
-  .contact{display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;margin-top:8px}
-  .contact a{font-family:"IBM Plex Mono",monospace;font-size:14px;letter-spacing:.02em;
-    display:inline-flex;align-items:center;gap:8px}
-  .contact a .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);display:inline-block}
-  footer{padding:40px 0 60px;color:var(--muted)}
-  footer .mono{font-size:11px}
+  /* Credentials */
+  .credentials{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .credential-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .credential-card h3{font-family:"Fraunces",serif;font-size:23px;font-weight:500;margin:7px 0 8px}
+  .credential-card p{color:var(--muted);margin:0;font-size:15px}
+  .credential-card p+p{margin-top:8px}
 
-  @media (max-width:760px){
-    .about-grid{grid-template-columns:1fr;gap:22px}
-    .cards{grid-template-columns:1fr}
-    .flagship{padding:30px}
-    .skill-row{grid-template-columns:1fr;gap:4px}
-    header.hero{padding:52px 0 30px}
+  /* Contact */
+  .contact-section{background:var(--teal-soft);border-top:none;margin-top:0}
+  .contact-grid{display:grid;grid-template-columns:1fr auto;gap:44px;align-items:end}
+  .contact-grid h2{font-family:"Fraunces",serif;font-size:clamp(34px,5vw,50px);font-weight:500;line-height:1.08;margin:10px 0 0}
+  .contact-links{display:grid;gap:10px;text-align:right}
+  .contact-links a{font-family:"IBM Plex Mono",monospace;font-size:13px}
+  footer{padding:34px 0 48px;color:var(--muted)}
+  footer .mono{font-size:10.5px}
+
+  @media (max-width:900px){
+    .hero-grid,.flagship-top,.about-grid{grid-template-columns:1fr}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .case-grid{grid-template-columns:1fr 1fr}
+    .reliability{grid-template-columns:1fr}
+    .flagship-flow{grid-template-columns:1fr 1fr}
   }
-  @media (prefers-reduced-motion:reduce){
-    .ramp-dot{animation:none;left:97%}
-    html{scroll-behavior:auto}
-    .card{transition:none}
+  @media (max-width:680px){
+    .wrap{padding:0 20px}
+    .nav-links a:not(.nav-cta){display:none}
+    header.hero{padding:58px 0 34px}
+    section{padding:58px 0}
+    .impact-grid,.case-grid,.credentials,.contact-grid{grid-template-columns:1fr}
+    .flagship{padding:30px 24px}
+    .flagship-flow{grid-template-columns:1fr}
+    .skill-row,.principle{grid-template-columns:1fr;gap:5px}
+    .contact-links{text-align:left}
+    .ramp-label{align-items:flex-start;flex-direction:column;gap:5px}
   }
+  @media (prefers-reduced-motion:reduce){.ramp-dot{animation:none;left:97%}html{scroll-behavior:auto}.btn{transition:none}}
   :focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:3px}
 </style>
 </head>
 <body>
 
-<div class="wrap">
-
-  <header class="hero">
-    <p class="mono eyebrow">Linguist &nbsp;&rarr;&nbsp; AI Systems Designer</p>
-    <h1>Fuji<br>Margiati</h1>
-    <p class="role">Prompt Engineer &nbsp;·&nbsp; AI Automation &nbsp;·&nbsp; LLM &amp; NLP Systems Design</p>
-    <p class="thesis">I turn language and raw data into systems that <em>make decisions</em> — from crisis-detection engines to LLM-powered sentiment.</p>
-
-    <div class="ramp" aria-hidden="true">
-      <div class="ramp-label">
-        <span class="mono">Smart Alert · crisis lifecycle</span>
-        <span class="mono">real-time signal</span>
+<div class="nav-shell">
+  <div class="wrap">
+    <nav aria-label="Primary navigation">
+      <a class="brand" href="#top">Fuji Margiati</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#approach">Approach</a>
+        <a href="#skills">Skills</a>
+        <a href="#credentials">Credentials</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </div>
-      <div class="ramp-track"><span class="ramp-dot"></span></div>
-      <div class="ramp-states">
-        <span class="s-normal">Normal</span>
-        <span class="s-watch">Watch</span>
-        <span class="s-hot">Hot</span>
-        <span class="s-crisis">Crisis</span>
-      </div>
-    </div>
-  </header>
-
-  <section id="about">
-    <div class="sec-head"><p class="mono">Approach</p></div>
-    <div class="about-grid">
-      <div>
-        <p class="lead">Nine years at Dataxet Sonar — from Senior Data Analyst to Linguistics Manager. I started by reading sentiment and ended up building the systems that read it.</p>
-      </div>
-      <div>
-        <p>My background is Indonesian Literature, not engineering — and that's the point. I own concepts end-to-end: definitions, metrics, formulas, and workflows.</p>
-        <p>I ship through AI-assisted development and strong prompt engineering, turning messy business needs into reliable LLM workflows — even for complex systems.</p>
-        <p>Open to Prompt Engineer, AI Automation, AI / Insights Analyst, and Senior Data Analyst roles — remote, hybrid, or on-site.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="flagship">
-    <div class="flagship">
-      <p class="mono">Flagship — built end-to-end</p>
-      <h3>Cogan</h3>
-      <p>An LLM-powered media-intelligence platform. I designed the MCP server that connects Claude directly to a PostgreSQL database (deployed on Railway), with skill-driven automated report generation across 20+ industries and various clients, and a 17-detector anomaly engine that flags anomalies in the data.</p>
-      <div class="chips">
-        <span class="chip">MCP server</span>
-        <span class="chip">Claude → PostgreSQL</span>
-        <span class="chip">Railway</span>
-        <span class="chip">17-detector anomaly engine</span>
-        <span class="chip">Automated reporting</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="work">
-    <div class="sec-head"><p class="mono">Selected work</p><h2>Systems I've designed</h2></div>
-    <div class="cards">
-
-      <div class="card">
-        <span class="tag">Crisis intelligence</span>
-        <h3>Smart Alert</h3>
-        <p>A crisis early-warning system for social &amp; online media — a NORMAL→WATCH→HOT→CRISIS state machine driven by engagement-velocity (EVS) and story-based volume, with baselines and false-alarm controls.</p>
-        <a class="link" href="https://github.com/fujimargiati/smart-alert-concept">Read the concept</a>
-      </div>
-
-      <div class="card">
-        <span class="tag">NLP</span>
-        <h3>Sentiment Engine Evolution</h3>
-        <p>Three generations of a production sentiment system: rule-based NLP (adjective + noun) → ABSA → LLM-based sentiment &amp; ABSA — now also powering mood and sentence-type classification.</p>
-        <a class="link" href="https://github.com/fujimargiati/sentiment-engine-evolution">Read the concept</a>
-      </div>
-
-      <div class="card">
-        <span class="tag">Data design</span>
-        <h3>Industry Taxonomy</h3>
-        <p>Classification taxonomy databases built from scratch to categorize conversation per industry — the backbone that makes cross-client analysis consistent and comparable.</p>
-      </div>
-
-      <div class="card">
-        <span class="tag">Automation</span>
-        <h3>Insight Automation</h3>
-        <p>Automated insight reporting end-to-end, including GEO (Generative Engine Optimization) and EVO formats — shifting insight generation itself onto AI.</p>
-      </div>
-
-      <div class="card wide">
-        <span class="tag">Go-to-market</span>
-        <h3>Client Journey</h3>
-        <p>Designed the full client journey — client brief, sales deck, and onboarding automation — so the pipeline from first contact to live account is coherent and repeatable.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="sec-head"><p class="mono">Toolkit</p></div>
-    <div class="skill-row"><div class="k">AI &amp; LLM</div><div class="v">Prompt engineering, LLM automation &amp; workflow design, LLM-based classification (sentiment / ABSA / mood / sentence-type), AI-assisted development, MCP tooling — across Claude, ChatGPT, Gemini, DeepSeek, and Kimi</div></div>
-    <div class="skill-row"><div class="k">NLP</div><div class="v">Sentiment (rule-based → ABSA → LLM), NER, BIO tagging, industry taxonomy design; multilingual — Indonesian, Malay, English, Vietnamese</div></div>
-    <div class="skill-row"><div class="k">Systems</div><div class="v">Crisis / anomaly detection design (engagement-velocity &amp; volume-based, baselines, state machines), insight-report automation, GEO &amp; EVO reporting</div></div>
-    <div class="skill-row"><div class="k">Data</div><div class="v">Raw data → business decisions, SQL, PostgreSQL, Python (AI-assisted), BigQuery, EDA, Tableau, Google Data Studio</div></div>
-  </section>
-
-  <section id="contact">
-    <div class="sec-head"><p class="mono">Contact</p><h2>Let's build something</h2></div>
-    <div class="contact">
-      <a href="mailto:fujimargiati@gmail.com"><span class="dot"></span>fujimargiati@gmail.com</a>
-      <a href="https://www.linkedin.com/in/fujimargiati/"><span class="dot"></span>LinkedIn</a>
-      <a href="https://github.com/fujimargiati"><span class="dot"></span>GitHub</a>
-    </div>
-  </section>
-
-  <footer>
-    <p class="mono">Fuji Margiati · Jakarta, Indonesia · AI &amp; NLP Systems Design</p>
-  </footer>
-
+    </nav>
+  </div>
 </div>
+
+<main id="top">
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-grid">
+        <div>
+          <p class="mono eyebrow">Linguist &nbsp;→&nbsp; AI Systems Designer</p>
+          <h1>Fuji<br>Margiati</h1>
+          <p class="role">Prompt Engineer · AI Automation · LLM &amp; NLP Systems Design</p>
+          <p class="thesis">I turn language, data, and business rules into AI systems that <em>classify, detect, and explain</em>.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#work">View selected work</a>
+            <a class="btn secondary" href="Fuji_Margiati_CV_Detailed.pdf" target="_blank" rel="noopener">Download résumé</a>
+          </div>
+        </div>
+        <aside class="hero-note" aria-label="Professional summary">
+          <p><strong>9 years</strong> building language and analytics systems at Dataxet Sonar, progressing from data research and client reporting to leading AI/NLP system design.</p>
+          <p>My work spans prompt engineering, sentiment and ABSA, taxonomy design, crisis intelligence, anomaly detection, MCP tooling, and automated insight generation.</p>
+        </aside>
+      </div>
+
+      <div class="ramp" aria-label="Smart Alert crisis lifecycle illustration">
+        <div class="ramp-label">
+          <span class="mono">Smart Alert · crisis lifecycle</span>
+          <span class="mono">signal → state → action</span>
+        </div>
+        <div class="ramp-track"><span class="ramp-dot"></span></div>
+        <div class="ramp-states">
+          <span class="s-normal">Normal</span>
+          <span class="s-watch">Watch</span>
+          <span class="s-hot">Hot</span>
+          <span class="s-crisis">Crisis</span>
+        </div>
+      </div>
+    </header>
+
+    <section aria-labelledby="impact-title">
+      <div class="sec-head">
+        <p class="mono">At a glance</p>
+        <h2 id="impact-title">Experience grounded in shipped systems</h2>
+      </div>
+      <div class="impact-grid">
+        <div class="metric"><strong>9</strong><span>years across data research, analytics, linguistics, and AI/NLP systems design</span></div>
+        <div class="metric"><strong>20+</strong><span>industry contexts supported by classification and automated reporting workflows</span></div>
+        <div class="metric"><strong>17</strong><span>anomaly detectors designed across six detector families inside Cogan</span></div>
+        <div class="metric"><strong>3</strong><span>generations of sentiment systems: rule-based, ABSA, and LLM-based</span></div>
+      </div>
+    </section>
+
+    <section id="approach" aria-labelledby="approach-title">
+      <div class="sec-head"><p class="mono">Approach</p><h2 id="approach-title">Language-first systems thinking</h2></div>
+      <div class="about-grid">
+        <div>
+          <p class="lead">My linguistics background helps me define what an AI system should understand before deciding how it should be implemented.</p>
+        </div>
+        <div>
+          <p>I work from ambiguous business questions toward explicit definitions, labels, rules, metrics, formulas, prompts, and workflows. That includes deciding what counts as an issue, how sentiment should be interpreted by aspect, when a signal becomes a crisis, and what evidence a generated insight must use.</p>
+          <p>I then translate those definitions into working AI-assisted systems using structured prompts, database-connected tools, reusable analytical skills, and validation logic.</p>
+          <div class="principles">
+            <div class="principle"><b>Define</b><span>Turn vague concepts into operational labels, metrics, and decision rules.</span></div>
+            <div class="principle"><b>Design</b><span>Build prompts, workflows, taxonomies, state machines, and analytical components.</span></div>
+            <div class="principle"><b>Validate</b><span>Use baselines, false-alarm controls, evaluation datasets, and traceable evidence.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-title">
+      <div class="sec-head">
+        <p class="mono">Flagship system</p>
+        <h2 id="work-title">Cogan</h2>
+        <p>An LLM-powered media-intelligence platform combining classification, database-connected analysis, reusable analytical tools, anomaly detection, and automated report generation.</p>
+      </div>
+      <div class="flagship">
+        <div class="flagship-top">
+          <div>
+            <p class="mono">Built end-to-end</p>
+            <h3>From raw media data to structured insight</h3>
+            <p class="summary">Cogan connects Claude to a PostgreSQL database through an MCP server deployed on Railway. It supports LLM-based sentiment and ABSA, mood and sentence-type classification, reusable analytical skills, automated reporting, bulk data loading, and a 17-detector anomaly engine.</p>
+            <div class="chips">
+              <span class="chip">Prompt engineering</span>
+              <span class="chip">MCP server</span>
+              <span class="chip">Claude → PostgreSQL</span>
+              <span class="chip">Railway</span>
+              <span class="chip">17 anomaly detectors</span>
+              <span class="chip">Automated reporting</span>
+            </div>
+          </div>
+          <aside class="scope-box">
+            <h4>My contribution</h4>
+            <ul>
+              <li>Defined the product and analytical workflows.</li>
+              <li>Wrote and refined classification and reporting prompts.</li>
+              <li>Designed the MCP and database-access architecture.</li>
+              <li>Built reusable analysis tools and anomaly logic.</li>
+              <li>Developed the system through AI-assisted implementation.</li>
+            </ul>
+          </aside>
+        </div>
+        <div class="flagship-flow" aria-label="Cogan workflow">
+          <div class="flow-step"><b>01 · Input</b><span>Raw social and online-media data</span></div>
+          <div class="flow-step"><b>02 · Classify</b><span>Sentiment, ABSA, mood, sentence type</span></div>
+          <div class="flow-step"><b>03 · Analyze</b><span>Database tools, metrics, and anomaly checks</span></div>
+          <div class="flow-step"><b>04 · Generate</b><span>Skill-driven insight and report workflows</span></div>
+          <div class="flow-step"><b>05 · Deliver</b><span>Structured, traceable client-facing outputs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="cases-title">
+      <div class="sec-head"><p class="mono">Selected case studies</p><h2 id="cases-title">Systems I have designed</h2></div>
+      <div class="cases">
+        <article class="case">
+          <div class="case-head">
+            <div><span class="tag">Crisis intelligence</span><h3>Smart Alert</h3></div>
+            <a class="case-link" href="https://github.com/fujimargiati/smart-alert-concept" target="_blank" rel="noopener">Read the concept</a>
+          </div>
+          <div class="case-grid">
+            <div class="case-block"><h4>Problem</h4><p>High conversation volume does not always indicate a real crisis; repost and wire noise can create false alarms.</p></div>
+            <div class="case-block"><h4>My role</h4><p>Owned the concept, metrics, formulas, state transitions, issue prompts, and false-alarm logic.</p></div>
+            <div class="case-block"><h4>System</h4><p>EVS and story-volume detection with baselines and a sequential NORMAL → WATCH → HOT → CRISIS state machine.</p></div>
+            <div class="case-block"><h4>Design outcome</h4><p>A structured escalation framework that separates routine spikes from signals requiring attention.</p></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-head">
+            <div><span class="tag">NLP evolution</span><h3>Sentiment Engine Evolution</h3></div>
+            <a class="case-link" href="https://github.com/fujimargiati/sentiment-engine-evolution" target="_blank" rel="noopener">Read the concept</a>
+          </div>
+          <div class="case-grid">
+            <div class="case-block"><h4>Problem</h4><p>Generic sentiment labels miss which entity or aspect is being evaluated in a sentence.</p></div>
+            <div class="case-block"><h4>My role</h4><p>Designed the linguistic logic, taxonomy, datasets, and prompts across three generations of the system.</p></div>
+            <div class="case-block"><h4>System</h4><p>Rule-based adjective–noun relationships evolved into ABSA and later LLM-based sentiment and ABSA classification.</p></div>
+            <div class="case-block"><h4>Design outcome</h4><p>A more context-aware framework supporting sentiment, mood, and sentence-type classification in production.</p></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-head">
+            <div><span class="tag">Data design</span><h3>Industry Taxonomy System</h3></div>
+          </div>
+          <div class="case-grid">
+            <div class="case-block"><h4>Problem</h4><p>Different industries discuss different products, services, issues, and stakeholders, making one generic taxonomy unreliable.</p></div>
+            <div class="case-block"><h4>My role</h4><p>Built industry-specific category structures and language definitions from scratch.</p></div>
+            <div class="case-block"><h4>System</h4><p>Reusable taxonomy databases supporting structured classification across 20+ industry contexts.</p></div>
+            <div class="case-block"><h4>Design outcome</h4><p>More consistent and comparable analysis across clients, reports, and classification workflows.</p></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-head">
+            <div><span class="tag">Insight automation</span><h3>Automated Report Workflows</h3></div>
+          </div>
+          <div class="case-grid">
+            <div class="case-block"><h4>Problem</h4><p>Insight production involved repetitive manual steps across data review, narrative writing, and report preparation.</p></div>
+            <div class="case-block"><h4>My role</h4><p>Defined report structures, analytical skills, prompts, and end-to-end workflow logic.</p></div>
+            <div class="case-block"><h4>System</h4><p>Prompt-driven generation for recurring media-intelligence reports, including GEO and EVO formats.</p></div>
+            <div class="case-block"><h4>Design outcome</h4><p>A repeatable workflow designed to make insight generation faster and more consistent.</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="reliability-title">
+      <div class="sec-head"><p class="mono">Beyond prompting</p><h2 id="reliability-title">How I design for reliability</h2></div>
+      <div class="reliability">
+        <article><h3>Explicit definitions</h3><p>Labels, concepts, and expected outputs are translated into operational definitions before prompting begins.</p></article>
+        <article><h3>Structured decision logic</h3><p>State machines, baselines, thresholds, reusable tools, and database-backed calculations reduce ad hoc interpretation.</p></article>
+        <article><h3>Traceable evidence</h3><p>Generated insight is designed around underlying data, analytical outputs, and reviewable evidence rather than unsupported narrative.</p></article>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="sec-head"><p class="mono">Toolkit</p><h2 id="skills-title">Core capabilities</h2></div>
+      <div class="skill-row"><div class="k">Prompt &amp; LLM systems</div><div class="v">Prompt design and refinement, structured classification workflows, automated report generation, reusable analytical skills, MCP tooling, Claude, ChatGPT, Gemini, DeepSeek, and Kimi</div></div>
+      <div class="skill-row"><div class="k">NLP &amp; language</div><div class="v">Sentiment analysis, ABSA, mood and sentence-type classification, issue/sub-issue detection, NER, BIO tagging, taxonomy design, label recommendation, spokesperson detection</div></div>
+      <div class="skill-row"><div class="k">Systems design</div><div class="v">Crisis and anomaly detection, engagement-velocity and volume-based logic, baselines, thresholds, state machines, workflow automation, GEO and EVO reporting</div></div>
+      <div class="skill-row"><div class="k">Data &amp; prototyping</div><div class="v">SQL, PostgreSQL, Python for data analysis and workflow prototyping, BigQuery, EDA, Tableau, Google Data Studio, Railway</div></div>
+    </section>
+
+    <section id="credentials" aria-labelledby="credentials-title">
+      <div class="sec-head"><p class="mono">Credentials</p><h2 id="credentials-title">Education and training</h2></div>
+      <div class="credentials">
+        <article class="credential-card">
+          <p class="mono">Education</p>
+          <h3>University of Indonesia</h3>
+          <p>B.A. in Indonesian Literature, linguistics focus</p>
+          <p>2013–2017 · GPA 3.52</p>
+        </article>
+        <article class="credential-card">
+          <p class="mono">Training</p>
+          <h3>Full-Stack Data Analytics</h3>
+          <p>RevoU, 2022 — Statistics, SQL, Python, Tableau, and Google Data Studio</p>
+          <p>Intensive English — LC Online, 2022</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <section id="contact" class="contact-section" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="mono">Contact</p>
+        <h2 id="contact-title">Open to Prompt Engineer, AI Automation, and AI/NLP Systems roles.</h2>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:fujimargiati@gmail.com">fujimargiati@gmail.com</a>
+        <a href="https://www.linkedin.com/in/fujimargiati/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/fujimargiati" target="_blank" rel="noopener">GitHub</a>
+        <a href="Fuji_Margiati_CV_Detailed.pdf" target="_blank" rel="noopener">Download résumé</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><p class="mono">Fuji Margiati · Jakarta, Indonesia · Prompt Engineering &amp; AI/NLP Systems Design</p></div>
+</footer>
 </body>
 </html>
